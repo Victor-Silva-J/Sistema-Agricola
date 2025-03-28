@@ -1,0 +1,12 @@
+package com.victor.sistemaagricola.funcionario;
+
+public enum Funcao {
+	TRABALHADOR_RURAL_CANA,
+	TRABALHADOR_RURAL_BANANA,
+	ADMINISTRADOR,
+	ENCARREGADO,
+	FEITOR,
+	MOTORISTA,
+	OPERADOR,
+	TRATORISTA
+}
