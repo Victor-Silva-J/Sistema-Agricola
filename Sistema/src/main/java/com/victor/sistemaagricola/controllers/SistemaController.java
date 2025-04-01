@@ -72,5 +72,14 @@ public class SistemaController {
 	@Transactional
 	public void ativar(@PathVariable Long id) {
 		var funcionario = repository.getReferenceById(id);
-		funcionario.ativar();	}
+		funcionario.ativar();
+		}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<DadosDetalhamentoFuncionario> detalhar(@PathVariable Long id){
+		var funcionario = repository.getReferenceById(id);
+		
+		return ResponseEntity.ok(new DadosDetalhamentoFuncionario(funcionario));
+	}
+	
 }
